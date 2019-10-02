@@ -1,0 +1,19 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html { //defines what 1 rem is
+    font-size: 62.5%; //base font-size is 16px so times 62.5 rem becomes 10px
+}
+
+body {
+    box-sizing:border-box;
+}
+
+main{
+    //background-color: $color-grey-light-1;
+}

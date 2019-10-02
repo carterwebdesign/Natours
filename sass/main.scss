@@ -1,0 +1,41 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables"; //colors
+
+@import "base/animations"; //all animations
+@import "base/base"; //*, html, and body
+@import "base/typography"; //text styles
+@import "base/utilities"; //
+
+@import "components/button"; //button styles
+@import "components/bg-video"; //background video
+@import "components/composition";
+@import "components/card";
+@import "components/feature-box";
+@import "components/form";
+@import "components/popup";
+@import "components/story";
+
+@import "layout/footer";
+@import "layout/grid";
+@import "layout/header"; //header
+@import "layout/navigation";
+
+@import "pages/home"; 
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+

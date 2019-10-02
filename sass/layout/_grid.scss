@@ -1,0 +1,52 @@
+.row {
+    max-width: $grid-width;
+    //background-color: $color-grey-light-1;
+    margin: 0 auto;
+    
+
+    &:not(:last-child) {                                //every child except the last child
+    margin-bottom: $gutter-vertical;
+    }
+
+
+    @include clearfix;
+    
+
+    // just like doing ".col" but it selects all attributes with a class starting with "col-", or change "^" to "*" to select any classes containing "col-", and $ would specify any class ending with "col-"
+    [class^="col-"] { 
+        
+        //background-color:$color-grey-light-1;
+        float:left;
+
+        &:not(:last-child) {
+            margin-right: $gutter-horizontal;
+        }
+
+    }
+
+    .col-1-of-2 {
+        width: calc((100% - #{$gutter-horizontal}) / 2); //#{} was necessary to use sass variables in mathematical equations
+    }
+
+    .col-1-of-3 {
+        width: calc((100% - #{$gutter-horizontal * 2}) / 3); 
+    }
+
+    .col-2-of-3 {
+        width: calc( #{$gutter-horizontal} + ((100% - #{$gutter-horizontal * 2}) / 3) * 2); 
+    }
+
+    .col-1-of-4 {
+        width: calc((100% - #{$gutter-horizontal} * 3) / 4); 
+    }
+
+    .col-2-of-4 {
+        width: calc( #{$gutter-horizontal} +  ((100% - #{$gutter-horizontal} * 3) / 4) * 2); 
+    }
+
+    .col-3-of-4 {
+        width: calc(2 * #{$gutter-horizontal} + ((100% - #{$gutter-horizontal} * 3) / 4) * 3); 
+    }
+
+    
+}

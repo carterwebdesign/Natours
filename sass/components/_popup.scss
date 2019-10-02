@@ -1,0 +1,83 @@
+.popup {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba($color-black, .8);
+    z-index: 10000;
+    
+    opacity: 0;
+    visibility: hidden;
+    transition: all .8;
+
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__close {
+        &:link,
+        &:visited {
+            color: $color-black;
+            text-decoration: none;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            text-align: right;
+            font-size: 3rem;
+            display: inline-block;
+            transition: all .2s;
+            width: 5rem;
+            height: 5rem;
+            text-align: center;
+        }
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    &__content {
+        background-color: white;
+        width: 60%;
+        height: 50rem;
+        box-shadow: 0 2rem 4rem rgba($color-black, .2);
+        //border-radius: 3px;
+        display: table;
+        //overflow: hidden;
+        @include center;
+    }
+
+    &__left {
+        width: 33.333%;
+        display: table-cell;
+    }
+
+    &__right {
+        width: 66.667%;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 3rem 5rem;
+        backface-visibility: hidden;            //PREVENTS TEXT FROM SHAKING WHEN H2 ELEMENT DOES ANIMATION 
+
+    }
+
+    &__img {
+        width: 100%;
+        display: block;
+    }
+
+    &__text {
+        font-size: 1.4rem;
+        column-count: 2;
+        column-gap: 4rem;
+        column-rule: 1px solid $color-grey-dark-2;
+        margin-bottom: 2rem;
+
+        hyphens: auto;
+        -webkit-hyphens: auto;
+    }
+
+    
+}
